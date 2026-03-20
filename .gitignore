@@ -1,0 +1,36 @@
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Laravel / PHP
+/vendor/
+.env
+/storage/
+public/storage
+.phpunit.result.cache
+
+# Build outputs
+/public/build/
+/frontend/dist/
+/frontend/build/
+/bakendnew/public/build/
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Archives (zip files are ignored)
+*.zip
+*.ZIP
+*.tar.gz
+*.rar
+*.7z
+
+# Misc
+.env.local
+.env.*.local

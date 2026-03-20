@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
+:root{
+
+  --gold: #e6bf57; /* main gold */
+  --muted: rgba(255,255,255,0.12);
+  --panel: rgba(255,255,255,0.03);
+}
+
+.demo-hero{
+  background: linear-gradient(180deg,var(--bg1) 0%, var(--bg2) 100%);
+  color:#fff;
+  /* padding:64px 24px 96px; */
+  font-family: 'Inter', 'Inter Fallback', system-ui, -apple-system, "Segoe UI", Roboto, 'Helvetica Neue', Arial;
+}
+
+.hero-container{
+  max-width:1200px;
+  margin:0 auto;
+}
+
+.hero-title{
+  font-size:60px; /* requested exact size */
+  line-height:1.02;
+  font-weight:700;
+  text-align:center;
+  margin:0 auto 28px;
+  color:#fff;
+  letter-spacing:0.4px;
+  text-shadow: 0 2px 0 rgba(0,0,0,0.35);
+}
+
+.hero-line{
+  display:inline-flex;
+  align-items:baseline;
+  
+  gap:18px;
+  white-space:nowrap;
+}
+.hero-title-gold{ color:var(--gold); display:inline-block; font-weight:800 }
+.hero-title-white-inline{ color:#ffffff; display:inline-block; margin-left:0; font-weight:700 }
+.hero-title-white{ display:block; margin-top:6px }
+
+.hero-inner{
+  display:flex;
+  gap:44px;
+  align-items:flex-start;
+  justify-content:center;
+  margin-top:18px;
+}
+
+.profile-card{ flex:0 0 260px; display:flex; align-items:center; justify-content:center; }
+
+.portrait-wrapper{
+  width:320px;
+  height:320px;
+  border-radius:18px;
+  padding:8px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  box-shadow: 0 18px 40px rgba(6,10,18,0.65), 0 0 0 6px rgba(230,191,87,0.07);
+  border:4px solid rgba(230,191,87,0.95);
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.portrait-wrapper img{ width:100%; height:100%; object-fit:cover; border-radius:12px; display:block; }
+
+.profile-details{ flex:1; text-align:left; max-width:760px; }
+
+.candidate-name{ font-size:47px; margin:4px 0 6px; color:var(--gold); font-weight:800; }
+.candidate-sub{ color:#f1dab2; font-size:19px; margin-bottom:14px; font-weight:600 }
+
+.intro, .mission{ color:#d9e0e6; font-size:20px; margin:8px 0; line-height:1.5 }
+.icon{ color:var(--gold); margin-right:10px }
+
+.sep{ height:1px; background:rgba(255,255,255,0.04); border:none; margin:18px 0 }
+
+.contact-section{
+  padding-left:14px;
+  border-left:4px solid var(--gold);
+}
+
+.contact-section h3{ margin:0 0 12px; color:#fff; font-size:19px; font-weight:700 }
+
+.contact-card{
+  background:var(--panel);
+  border:1px solid rgba(255,255,255,0.04);
+  padding:12px 14px;
+  border-radius:10px;
+  display:flex;
+  gap:12px;
+  align-items:center;
+  color:#e9eef2;
+  margin-bottom:12px;
+}
+
+.contact-card a{ color:#eef2f6; text-decoration:none; }
+
+.contact-actions{ display:flex; gap:12px}
+.contact-actions 
+.btn{ display:inline-flex; align-items:center; justify-content:center; padding:12px 18px; border-radius:10px; border:1px solid rgba(255,255,255,0.04); background:rgba(255,255,255,0.02); color:#e9eef2; text-decoration:none; font-weight:600 }
+
+.btn.linkedin{ flex:1 }
+.btn.x{ flex:1 }
+
+/* Responsive: stack and center on small screens */
+@media (max-width: 1200px){
+  .hero-title{ font-size:28px }
+}
+
+@media (max-width: 900px){
+  .hero-title{ font-size:20px }
+  .hero-inner{ flex-direction:column; align-items:center; gap:20px }
+  .profile-details{ text-align:center; }
+  .contact-section{ border-left:none; padding-left:0 }
+  .profile-card{ margin-bottom:6px }
+  .portrait-wrapper{ width:200px; height:200px }
+}
+
+@media (max-width:480px){
+  .hero-title{ font-size:18px; text-wrap: inherit; }
+  .candidate-name{ font-size:22px }
+  .portrait-wrapper{ width:160px; height:160px }
+  /* .demo-hero{ padding:40px 16px 64px } */
+  .hero-line{ color: #25D366;}
+}
+
+.btn {
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-block;
+  border: 2px solid transparent;
+}
+
+/* Website Button */
+.linkedin {
+  color: #0077b5;          /* Link text color */
+  border-color: #0077b5;   /* Border color */
+  background: transparent;
+}
+
+/* Whatsapp Button */
+.x {
+  color: #25D366;
+  border-color: #25D366;
+  background: transparent;
+}
+
+/* Hover Effect */
+.btn:hover {
+  color: white;
+}
+
+/* Individual Hover Background */
+.linkedin:hover {
+  background: #0077b5;
+}
+
+.x:hover {
+  background: #25D366;
+}
+
+
+
+
+
+.hero-line {
+  display: inline-flex;
+  gap: 0.5rem;
+  flex-wrap: nowrap;
+}
+
+/* MOBILE ONLY */
+@media (max-width: 640px) {
+  .hero-line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
